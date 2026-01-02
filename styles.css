@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #004a9f 0%, #001f4d 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.game-container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 74, 159, 0.4);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    border: 3px solid #004a9f;
+}
+
+h1 {
+    color: #004a9f;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #e6f0ff 0%, #cce0ff 100%);
+    border-radius: 15px;
+    border: 2px solid #004a9f;
+}
+
+.score-item {
+    text-align: center;
+}
+
+.score-label {
+    font-size: 0.9em;
+    color: #004a9f;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.score-value {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.score-value.wins { color: #28a745; }
+.score-value.losses { color: #dc3545; }
+.score-value.ties { color: #ffc107; }
+
+.battle-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 0;
+    min-height: 120px;
+}
+
+.player-side, .computer-side {
+    text-align: center;
+}
+
+.side-label {
+    font-size: 0.9em;
+    color: #004a9f;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.choice-display {
+    font-size: 4em;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vs {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #004a9f;
+}
+
+.result-text {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 20px 0;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-text.win { color: #28a745; }
+.result-text.lose { color: #dc3545; }
+.result-text.tie { color: #ffc107; }
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.choice-btn {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50%;
+    font-size: 3em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #f0f0f0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.choice-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.choice-btn:active {
+    transform: scale(0.95);
+}
+
+.choice-btn.scissors:hover { background: #cce0ff; }
+.choice-btn.rock:hover { background: #99c2ff; }
+.choice-btn.paper:hover { background: #b3d1ff; }
+
+.choice-name {
+    font-size: 0.8em;
+    margin-top: 10px;
+    color: #004a9f;
+    font-weight: bold;
+}
+
+.reset-btn {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 1em;
+    border: none;
+    border-radius: 25px;
+    background: #004a9f;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.reset-btn:hover {
+    background: #003876;
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+}
+
+.shaking {
+    animation: shake 0.3s ease-in-out 3;
+}
+
+@keyframes pop {
+    0% { transform: scale(0); }
+    80% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.pop {
+    animation: pop 0.3s ease-out;
+}
